@@ -9,7 +9,7 @@ int main(void){
     char string2 [] = {"abc"}; // easier method to initialize a string
     int field[FIELDLENGTH];
 
-    int b[7] = 3; // assigning a value to a specific index/element of an array/field.
+    b[7] = 3; // assigning a value to a specific index/element of an array/field.
     for (i = 0; i<FIELDLENGTH; i++){ //Array mit Zahlen von 1 bis 100 befüllen.
         field[i] = i+1;
     }
@@ -38,4 +38,4 @@ int main(void){
 /* Array size cannot be changed later on
    last element of an array is the size of the array minus one.
    array element can be selected by the index
-   It is not a must to enter the size of an array.
+   It is not a must to enter the size of an array.*/

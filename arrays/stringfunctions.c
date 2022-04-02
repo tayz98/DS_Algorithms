@@ -16,13 +16,14 @@ int main (void){
 
     int size;
 
+    size = sizeof(ice) / sizeof(char);
+
     // strlen and strcpy:
     if (size >= strlen(bear) + 1)
     {
         strcpy(ice, bear);
         printf("%s\n", ice); // prints "Baer" to the console. this function overwrites the content of ice[] with bear[]
     }
-    size = sizeof ()
 
     /* from ctype.h:
      * int toupper(int c): letter case will be transformed to upper case.
@@ -37,8 +38,26 @@ int main (void){
     char input[MAX], str[MAX];
     char c;
     int i = 0, j = 0, result = 0;
+
     printf("Enter a string\n");
-    fgets(input, MAX, stdin);
+    fgets(input, MAX, stdin);       // reads the string 'input' with fgets
+
+    while( ( c = input[i]) != '\0')
+    {
+        if (isdigit(c))         // if it is a digit, save/write it to a different string.
+        {
+            str[j++] = c;
+            input[i] = '-';
+        }
+        else if (isalpha(c) && islower(c)) // isalpha checks for letter. islower checks for lower letter.
+        {
+            input[i] = toupper(c); // converts lower case letter to upper case.
+        }
+    }
+    result = atoi(str);
+    printf("The result is now:\n&s", input);
+    printf("The number is: %d\n",  result);
     return 0;
+
 
 }
