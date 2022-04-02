@@ -32,6 +32,7 @@ int main(void){
     fputs(str, stdout);               // fputs writes the string 'str' to stdout (without the '\0)
 
     // difference between scanf and fgets is: scanf only reads till space, while fgets reads till '\n' (or EOF)
+    // fgets can also read from files. scanf only from the terminal.
 
     // the library 'string.h' has many useful functions for working with strings.
     /* List with useful functions:
