@@ -35,14 +35,13 @@ int main(void){
 
     // the library 'string.h' has many useful functions for working with strings.
     /* List with useful functions:
-     * strcat, strncat:
-     *
-     *
-     *
-     *
-     *
-     *
-     *
+     * strcat:  Appends the string pointed to, by src to the end of the string pointed to by dest.
+     * strncat: Appends the string pointed to, by src to the end of the string pointed to, by dest up to n characters long.
+     * strcmp:  Compares the string pointed to, by str1 to the string pointed to by str2.
+     * strncmp: Compares at most the first n bytes of str1 and str2.
+     * strlen:  Computes the length of the string str up to but not including the terminating null character.
+     * strchr:  Searches for the first occurrence of the character c (an unsigned char) in the string pointed to, by the argument str.
+     * strstr:  Finds the first occurrence of the entire string needle (not including the terminating null character) which appears in the string haystack.
      */
     return 0;
 }
