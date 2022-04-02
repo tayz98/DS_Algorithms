@@ -27,7 +27,7 @@ int main (void){
     float *pSum;
     float *pResult;
     char c = 10;
-    char *ptr; // this variable can save an address. in this case a random memory cell. should be avoided!
+    char *ptr; // this variable can save an address. in this case a random memory cell. not initializing pointers should be avoided!
 
     // examples of using address and content operators:
     int sum = 26;
