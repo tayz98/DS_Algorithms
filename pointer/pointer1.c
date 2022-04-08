@@ -55,7 +55,9 @@ int main (void){
     int *random_ptr;
     int value = 2;
     random_ptr = &value;
-    random_ptr += 10; // increases the pointer value of 10 times the * datatype.
+    *random_ptr += 10; // *random_ptr and 'value' have now the value of 12.
+    random_ptr += 10; // without '*' the memory address, not the value of 'value' will be changed.
+                      // adding 10 means, 10 * datatype (on 32-bits systems it means: 40 byte will be added to the memory address of random_ptr.
 
 /*  additional notes:
  *  it is bad practice defining a pointer without initializing it. better is it to initialize with NULL.
