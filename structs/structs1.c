@@ -38,6 +38,6 @@ int main(void) {
     p2 x, y; // p2 is used here to create new variables
 
     ADDRESS c1[100]; // same as above but with an array
-    c1[2].city = "b";
+    c1[2].code = 3;
     return 0;
 }
