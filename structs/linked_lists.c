@@ -24,7 +24,7 @@ typedef struct listnode {
     unsigned articleNumber; // from artibleNumber to price we have our data
     char *article;
     double price;
-    struct listnode *next; // linked pointer: shows to the struct (itself)
+    struct listnode *next; // linked pointer: shows to the struct (recursive)
 } Listnode;
 int main (void) {
     // creating a list in vice versa order:
@@ -36,7 +36,7 @@ int main (void) {
     p->next = NULL; // set pointer to the first list element. As there is none yet -> NULL
     pstart = p; // start pointer pstart get's the address of p. pstart shows now to the beginning of the list.
     // p is now free.
-    p = (Listnode *) malloc (sizeof (Listnode)); // again for memory allocation the next element.
+    p = (Listnode *) malloc (sizeof (Listnode)); // again for dynamic memory allocation of the next element.
     p->articleNumber = 456;
     p->article = "Hoodie";
     p->price = 20;

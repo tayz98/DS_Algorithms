@@ -1,4 +1,4 @@
-// status: NOT DONE
+// status: DONE! :=)
 // Created by Alexander Nachtigal on 15.05.2022.
 //
 
@@ -17,20 +17,19 @@ typedef struct listnode{
 } Listnode;
 
 int main (void) {
-    // trash code doesn't work :(
-    Listnode *pStart, *p;
-    p = (Listnode *) malloc(sizeof (Listnode));
-    p->idBook = 1;
-    p->title = "Harry Potter #1";
-    p = (Listnode *) malloc(sizeof (Listnode));
-    p->next->idBook=2;
-    p->next->title="Harry Potter #2";
-    p->next->next=NULL;
-    pStart = p;
-    while (p->next != NULL) {
-        printf("book id is: %d", p->idBook);
-        p->next;
-    }
 
+    Listnode *pStart =NULL;
+    pStart = (Listnode *) malloc(sizeof (Listnode));
+    pStart->idBook = 1;
+    pStart->title = "Harry Potter #1";
+    pStart->next = (Listnode *) malloc(sizeof (Listnode));
+    pStart->next->idBook=2;
+    pStart->next->title="Harry Potter #2";
+    pStart->next->next=NULL;
+    Listnode *current = pStart;
+    while (current != NULL) {
+        printf("book id is: %d\n", current->idBook);
+        current = current -> next;
+    }
     return 0;
 }
